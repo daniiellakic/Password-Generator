@@ -52,17 +52,3 @@ function createPassword(len) {
 
     return password
 }
-
-//ClipBoard Copying
-passwordsEL.forEach(
-    function(el, i) {
-        el.addEventListener('click', copyToClip)
-
-    }
-)
-
-function copyToClip() {
-    let clip = this.textContent
-    navigator.clipboard.writeText(clip);
-    alert('copied')
-}
